@@ -1,10 +1,10 @@
-# Intro to ActiveRecord Objectives:
+# ActiveRecord & Associations
 
-- Review what an ORM is
+- types of relationships
 
-- Discuss ActiveRecord's purpose and Convention over Configuration
+- single source of truth
 
-- Setting up our database and models with ActiveRecord from scratch
+- join table
 
 - Explore Rakefile possibilities
 

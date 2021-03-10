@@ -1,10 +1,16 @@
 # ActiveRecord & Associations
 
 - types of relationships
+    - has_many
+    - belongs_to
+    - has_many through
+    - has_one
 
 - single source of truth
+    - belongs_to holds relationship
 
 - join table
+    - has two foreign keys
 
 - Explore Rakefile possibilities
 

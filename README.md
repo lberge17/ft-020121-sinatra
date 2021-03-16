@@ -3,7 +3,7 @@
 > Representational State Transfer
 
 
->Representational State Transfer (REST) is a software architectural style that defines a set of constraints to be used for creating Web services. Web services that conform to the REST architectural style, called RESTful Web services (RWS), provide interoperability between computer systems on the Internet. RESTful Web services allow the requesting systems to access and manipulate textual representations of Web resources by using a uniform and predefined set of stateless operations. Other kinds of Web services, such as SOAP Web services, expose their own arbitrary sets of operations.
+> Representational State Transfer (REST) is a software architectural style that defines a set of constraints to be used for creating Web services. Web services that conform to the REST architectural style, called RESTful Web services (RWS), provide interoperability between computer systems on the Internet. RESTful Web services allow the requesting systems to access and manipulate textual representations of Web resources by using a uniform and predefined set of stateless operations. Other kinds of Web services, such as SOAP Web services, expose their own arbitrary sets of operations.
 
 > "Web resources" were first defined on the World Wide Web as documents or files identified by their URLs. However, today they have a much more generic and abstract definition that encompasses every thing or entity that can be identified, named, addressed, or handled, in any way whatsoever, on the Web. In a RESTful Web service, requests made to a resource's URI will elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The response can confirm that some alteration has been made to the stored resource, and the response can provide hypertext links to other related resources or collections of resources. When HTTP is used, as is most common, the operations (HTTP methods) available are GET, HEAD, POST, PUT, PATCH, DELETE, CONNECT, OPTIONS and TRACE.
 
@@ -16,13 +16,13 @@
 
 | Verb | Route| Action|
 |------|------|-------|
-|  |  |  | <!-- READ all movies -->
-|  |  |  | <!-- READ one movie -->
-|  |  |  | <!-- CREATE one movie (form) -->
-|  |  |  | <!-- CREATE one movie (db) -->
-|  |  |  | <!-- UPDATE one movie (form) -->
-|  |  |  |  <!-- UPDATE one movie (db) -->
-|  |  |  |  <!-- DELETE one movie (db) -->
+| GET | /movies | index (erb) | <!-- READ all movies -->
+| GET | /movies/:id | show (erb) | <!-- READ one movie -->
+| GET | /movies/new | new (erb) | <!-- CREATE one movie (form) -->
+| POST | /movies | create | <!-- CREATE one movie (db) -->
+| GET | /movies/:id/edit | edit (erb) | <!-- UPDATE one movie (form) -->
+| PUT/PATCH | /movies/:id | update |  <!-- UPDATE one movie (db) -->
+| DELETE | /movies/:id | destroy |  <!-- DELETE one movie (db) -->
 
 
 # MVC 

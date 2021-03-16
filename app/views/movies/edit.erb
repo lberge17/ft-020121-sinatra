@@ -1,0 +1,5 @@
+<form action="/movies/<%= @movie.id %>" method="POST">
+    <input type="hidden" name="_method" value="patch">
+    <input type="text" name="title" value="<%= @movie.title %>">
+    <input type="submit" value="Update Movie">
+</form>

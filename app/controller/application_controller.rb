@@ -1,9 +1,13 @@
 class ApplicationController < Sinatra::Base
-    set :views, Proc.new { File.join(root, "../views") }
+    # set :views, Proc.new { File.join(root, "../views") }
+    
+    configure do
+        set :views, 'app/views'
+        set :public_folder, 'public'
+    end
 
     get '/' do
-        @movies = Movie.all
-        erb :index
+        erb :search
     end
 
     get '/search' do

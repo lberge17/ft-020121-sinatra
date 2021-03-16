@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
 
     get '/' do
         @movies = Movie.all
-        erb :index
+        erb :search
     end
 
     get '/search' do

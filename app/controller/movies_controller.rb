@@ -18,12 +18,14 @@ class MoviesController < ApplicationController
 
     # CREATE new movie (save in db)
     post '/movies' do
-        movie = Movie.new(title: params["title"])
+        movie = Movie.new(params["movie"])
+        binding.pry
 
         if movie.save
             redirect "/movies/#{movie.id}"
         else
-            redirect "/movies/new"
+            "Error #{movie.errors.full_messages.join(", ")}"
+            # redirect "/movies/new"
         end
     end
 
@@ -36,9 +38,8 @@ class MoviesController < ApplicationController
     # UPDATE 1 movie (save in db)
     patch '/movies/:id' do
         movie = Movie.find_by_id(params[:id])
-        movie.title = params["title"]
-
-        if movie.save
+        
+        if movie.update(params["movie"])
             redirect "/movies/#{movie.id}"
         else
             redirect "/movies/#{movie.id}/edit"
@@ -49,7 +50,7 @@ class MoviesController < ApplicationController
     delete "/movies/:id" do
         movie = Movie.find_by_id(params[:id])
         movie.destroy
-        
+
         redirect "/movies"
     end
 end

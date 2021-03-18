@@ -21,4 +21,6 @@ class Movie < ActiveRecord::Base
 
     # director
     belongs_to :director
+
+    validates :title, presence: true
 end

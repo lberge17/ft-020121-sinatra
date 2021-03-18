@@ -7,3 +7,7 @@ ActiveRecord::Base.establish_connection({
 })
 
 require_all 'app'
+
+# adds SQL query print outs to our terminal 
+# as we navigate our application in the browser
+ActiveRecord::Base.logger = Logger.new(STDOUT)

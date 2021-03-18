@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
+    belongs_to :user
     # class all method
     # class first method
     # class find/find_by/where (select)

@@ -1,4 +1,14 @@
+<!-- t.string "title"
+    t.integer "year"
+    t.text "description"
+    t.boolean "fresh"
+    t.string "rating" -->
+
 <form action="/movies" method="POST">
-    <input type="text" name="title" placeholder="title">
+    <input type="text" name="movie[title]" placeholder="title"><br>
+    <input type="text" name="movie[year]" placeholder="year"><br>
+    <textarea name="movie[description]" placeholder="description"></textarea><br>
+    <input type="text" name="movie[fresh]" placeholder="fresh"><br>
+    <input type="text" name="movie[rating]" placeholder="rating"><br>
     <input type="submit" value="Create Movie">
 </form>

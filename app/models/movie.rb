@@ -1,4 +1,5 @@
 class Movie < ActiveRecord::Base
+    belongs_to :user
     # class all method
     # class first method
     # class find/find_by/where (select)
@@ -21,4 +22,6 @@ class Movie < ActiveRecord::Base
 
     # director
     belongs_to :director
+
+    validates :title, presence: true
 end

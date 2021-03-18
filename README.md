@@ -1,6 +1,13 @@
 # User Authentication
 
-## Steps
+## Goals for Today
+
+- Add Users to our Movies Application
+- Movies belong_to users
+- Add signup/login/logout logic
+- Protect our routes so users can only CRUD movies that are theirs
+
+## Steps to Set Up Users
 
 - Add `bcrypt` to the gemfile
 - Add `has_secure_password` to the User model

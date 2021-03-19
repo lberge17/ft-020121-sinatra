@@ -1,6 +1,31 @@
-<%= @movie.title %>
+<h2>
+    <%= @movie.title %>
+</h2>
+<ul>
+    <li>
+        <%= @movie.year %>
+    </li>
+    <li>
+        <%= @movie.description %>
+    </li>
+    <li>
+        <% if @movie.fresh %>
+            FRESSSHHH
+        <% elsif @movie.fresh == false %>
+            ROTTEN
+        <% else %>
+            DONT KNOW
+        <% end %>
+    </li>
+    <li>
+        <%= @movie.year %>
+    </li>
+</ul>
+<a href="/movies/<%= @movie.id %>/edit">EDIT</a>
 
 <form action="/movies/<%= @movie.id %>" method="post">
-    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="_method" value="delete"> 
     <input type="submit" value="Delete Movie">
 </form>
+
+

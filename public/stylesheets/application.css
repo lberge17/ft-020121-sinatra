@@ -1,0 +1,21 @@
+.logout-link {
+    background: #252F47;
+    display: block;
+    border: none;
+    background: none;
+}
+.error-messaging{
+    background: red;
+    display: block;
+    border: black;
+    border-radius: 10px;
+}
+.test{
+    background-color: tan;
+}
+.page{
+    background-color: white;
+    margin-top: 10px;
+    vertical-align: auto
+
+}

@@ -33,8 +33,8 @@ class MoviesController < ApplicationController
         if movie.save
             redirect "/movies/#{movie.id}"
         else
-            "Error #{movie.errors.full_messages.join(", ")}"
-            # redirect "/movies/new"
+            flash[:error] = "#{movie.errors.full_messages.join(", ")}"
+            redirect "/movies/new"
         end
     end
 

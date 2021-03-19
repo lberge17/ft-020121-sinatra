@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--STYLESHEET --->
     <link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
+    <!--STYLESHEET --->
     <title>Movies App</title>
 </head>
 <%#--------- START NAVIGATION ------------%>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #252F47;">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">Home</a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #170582;">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src='images/logo.png' class="img-thumbnail" style="background-color: #170582;" alt="logo" width="80" height="80">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,17 +61,16 @@
 
 
 <%#--------- START BODY -------------%>
-<body class="position-relative" style="text-align: center;">
+<body class="position-relative page" style="background-color: #f6f0e8; text-align: center;">
+    <!---------------- STARTFLASH MESSAGING ------------>
+    <div class="error-messaging">
+        <%= flash[:error] %>
     
-    <%= yield %>
-
-    <% if logged_in? %>
-        <br><br>
-        <form action="/logout" method="post">
-            <input type="hidden" name="_method" value="delete">
-            <input type="submit" value="Logout">
-        </form>
-    <% end %>
+    </div>
+    <!---------------- END FLASH MESSAGING ------------>
+    <div class="container bg-light" class="page">
+        <%= yield %>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>

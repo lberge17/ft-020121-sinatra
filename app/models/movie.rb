@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-    belongs_to :user
+    belongs_to :user    
     
     # class all method
     # class first method

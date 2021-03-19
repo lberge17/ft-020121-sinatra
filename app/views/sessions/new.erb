@@ -1,5 +1,22 @@
-<form action="/login" method="post">
-    <input type="email" name="user[email]" placeholder="email"><br>
-    <input type="password" name="user[password]" placeholder="password"><br>
-    <input type="submit" value="Login">
-</form>
+
+<div class="container px-4" style="position: relative; vertical-align: auto;">
+    <form action="/login" method="post" class='row gx-5'>
+        <div class="col">
+            <div class="p-3 border bg-light">
+                <label for="email" class="col form-label">Email address</label>
+                <input id="email" type="email" name="user[email]" placeholder="email" class="p-3 form-control">
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 border bg-light">
+                <label for="password" class="col form-label">password</label>
+                <input id="password" type="password" name="user[password]" placeholder="password" class="p-3 form-control">
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 border bg-light">
+                <input type="submit" value="Login" >
+            </div>
+        </div>
+    </form>
+</div>

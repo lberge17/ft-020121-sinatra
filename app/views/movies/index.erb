@@ -1,5 +1,5 @@
-<ul>
+<ul class="list-group">
 <% @movies.each do |m| %>
-    <li><%= m.title %></li>
+    <li class="list-group-item"><a href="/movies/<%=m.id%>"><%= m.title %></a></li>
 <% end %>
 </ul>
